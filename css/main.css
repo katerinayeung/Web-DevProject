@@ -1,0 +1,70 @@
+:root{
+    /* Main font color */
+    --hunterGreen: #5E8666;
+    /* Background color */
+    --beige: #FDECDA;
+}
+
+*{
+    /* This allows the navbar to work correctly size each a correctly. */
+    box-sizing: border-box;
+}
+
+body{
+    /*margin: 0;*/
+    background-color: var(--beige);
+}
+
+/* This is a container to give margines for all content on this page. */
+.content{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*** STARTING navbar styles ***/
+.navbar{
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar a{
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: var(--hunterGreen);
+    text-decoration: none;
+    font-size: 20px;
+    width: 25%;
+    text-align: center;
+}
+
+a:hover{
+    background-color: var(--hunterGreen);
+    color: var(--beige);
+}
+/*** END navbar styles ***/
+
+#storeName{
+    color: var(--hunterGreen);
+    margin: 0;
+    text-align: center;
+    font-size: 125px;
+
+    /* Custom font related */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#indexMainImage{
+    height: 65%;
+    width: 65%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    border: 4px solid var(--hunterGreen);
+}

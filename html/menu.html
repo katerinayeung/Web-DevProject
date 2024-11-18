@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Welcome to the Cafe</h1>
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <span>Latte - $4.00</span>
+                    <button onclick="addToOrder('Latte', 4.00)">Add to Order</button>
+                </li>
+                <li>
+                    <span>Cappuccino - $4.50</span>
+                    <button onclick="addToOrder('Cappuccino', 4.50)">Add to Order</button>
+                </li>
+                <li>
+                    <span>Espresso - $3.00</span>
+                    <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+                </li>
+                <li>
+                    <span>Chocolate Cake - $5.00</span>
+                    <button onclick="addToOrder('Chocolate Cake', 5.00)">Add to Order</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <ul id="order-list"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
