@@ -3,43 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Menu</title>
+    <title>Cafe Bliss - Menu</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="../css/menu.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../html/index.html">Home</a>
+        <a href="#popular-section">Popular Items</a>
+        <a href="#coffee-section">Coffee</a>
+        <a href="#food-section">Food</a>
+    </div>
+
+    <!-- Menu Container -->
     <div class="menu-container">
-        <h1>Welcome to the Cafe</h1>
-        <div class="menu">
-            <h2>Menu</h2>
-            <ul>
-                <li>
-                    <span>Latte - $4.00</span>
-                    <button onclick="addToOrder('Latte', 4.00)">Add to Order</button>
-                </li>
-                <li>
-                    <span>Cappuccino - $4.50</span>
-                    <button onclick="addToOrder('Cappuccino', 4.50)">Add to Order</button>
-                </li>
-                <li>
-                    <span>Espresso - $3.00</span>
-                    <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
-                </li>
-                <li>
-                    <span>Chocolate Cake - $5.00</span>
-                    <button onclick="addToOrder('Chocolate Cake', 5.00)">Add to Order</button>
-                </li>
-            </ul>
+        <!-- Logo Section -->
+        <img src="../img/cafeLogo.png" alt="Cafe Bliss Logo" id="logo" width="200px" height="200px">
+        <h1>Menu</h1>
+
+        <!-- Popular Items Section -->
+        <div id="popular-section">
+            <h2>Popular Items</h2>
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel('popular-carousel', -1)">&#8249;</button>
+                <div class="carousel" id="popular-carousel">
+                    <!-- Each menu item in the carousel -->
+                    <div class="menu-item">
+                        <img src="../img/latte.jpg" alt="Latte" class="menu-image">
+                        <h3>Latte</h3>
+                        <p>Creamy espresso with steamed milk.</p>
+                        <p>$4.00</p>
+                        <button onclick="addToOrder('Latte', 4.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/matcha.jpg" alt="Matcha Latte" class="menu-image">
+                        <h3>Matcha Latte</h3>
+                        <p>Earthy matcha with steamed milk.</p>
+                        <p>$4.50</p>
+                        <button onclick="addToOrder('Matcha Latte', 4.50)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/mocha.jpg" alt="Mocha" class="menu-image">
+                        <h3>Mocha</h3>
+                        <p>Rich espresso with chocolate and milk.</p>
+                        <p>$4.75</p>
+                        <button onclick="addToOrder('Mocha', 4.75)">Add to Order</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('popular-carousel', 1)">&#8250;</button>
+            </div>
         </div>
 
+        <!-- Coffee Section -->
+        <div id="coffee-section">
+            <h2>Coffee</h2>
+            <!-- Coffee Carousel -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel('coffee-carousel', -1)">&#8249;</button>
+                <div class="carousel" id="coffee-carousel">
+                    <!-- Coffee menu items -->
+                    <div class="menu-item">
+                        <img src="../img/cappuccino.jpg" alt="Cappuccino" class="menu-image">
+                        <h3>Cappuccino</h3>
+                        <p>Rich espresso topped with frothy milk.</p>
+                        <p>$4.50</p>
+                        <button onclick="addToOrder('Cappuccino', 4.50)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/americano.jpg" alt="Americano" class="menu-image">
+                        <h3>Americano</h3>
+                        <p>Smooth espresso diluted with hot water.</p>
+                        <p>$3.50</p>
+                        <button onclick="addToOrder('Americano', 3.50)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/espresso.jpg" alt="Espresso" class="menu-image">
+                        <h3>Espresso</h3>
+                        <p>Strong and bold espresso shot.</p>
+                        <p>$3.00</p>
+                        <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('coffee-carousel', 1)">&#8250;</button>
+            </div>
+        </div>
+
+        <!-- Food Section -->
+        <div id="food-section">
+            <h2>Food</h2>
+            <!-- Food Carousel -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel('food-carousel', -1)">&#8249;</button>
+                <div class="carousel" id="food-carousel">
+                    <!-- Food menu items -->
+                    <div class="menu-item">
+                        <img src="../img/cake.jpg" alt="Chocolate Cake" class="menu-image">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich and moist chocolate delight.</p>
+                        <p>$5.00</p>
+                        <button onclick="addToOrder('Chocolate Cake', 5.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/croissant.jpg" alt="Croissant" class="menu-image">
+                        <h3>Croissant</h3>
+                        <p>Flaky, buttery pastry.</p>
+                        <p>$2.75</p>
+                        <button onclick="addToOrder('Croissant', 2.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/muffin.jpg" alt="Blueberry Muffin" class="menu-image">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Soft muffin filled with fresh blueberries.</p>
+                        <p>$2.75</p>
+                        <button onclick="addToOrder('Blueberry Muffin', 2.75)">Add to Order</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('food-carousel', 1)">&#8250;</button>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
         <div class="order-summary">
             <h2>Your Order</h2>
             <ul id="order-list"></ul>
             <p>Total: $<span id="total-price">0.00</span></p>
+            <button id="checkout-btn">Checkout</button>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="../js/script.js"></script>
 </body>
 </html>
