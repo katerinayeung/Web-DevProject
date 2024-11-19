@@ -1,0 +1,79 @@
+:root {
+    /* Main font color */
+    --hunterGreen: #5E8666;
+    /* Background color */
+    --beige: #FDECDA;
+    --darkbrown: #472e23;
+    --backgroundimg: url("../img/coffeeShop.jpg");
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: var(--backgroundimg);
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    color: var(--hunterGreen);
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--beige);
+    border: 4px solid var(--hunterGreen);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--hunterGreen);
+    font-family: "Cormorant Garamond", serif;
+}
+
+.menu ul, .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li, .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hunterGreen);
+}
+
+button {
+    background-color: var(--hunterGreen);
+    color: var(--beige);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: var(--beige);
+    color: var(--hunterGreen);
+    transform: scale(1.05);
+}
+
+.order-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--hunterGreen);
+}
+
+#total-price {
+    font-weight: bold;
+    color: var(--hunterGreen);
+}
