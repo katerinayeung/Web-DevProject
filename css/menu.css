@@ -7,6 +7,10 @@
     --lightGreen: #A3C9A8;
     --darkbrown: #472e23;
     --backgroundimg: url("../img/coffeeShop.jpg");
+    /* Font family */
+    --h2-font: 'Saint George', sans-serif;
+    --h3-font: "Poppins", serif;
+                                                
 }
 
 /* ---------- Global Styles ---------- */
@@ -18,9 +22,10 @@ body {
     background-color: var(--darkbrown);
     background-size: auto 100%;
     margin: 0;
-    font-family: "Cormorant Garamond", serif;
+    font-family: var(--h3-font);
     font-weight: 400;
     color: var(--hunterGreen);
+    font-size: 13px;
 }
 
 /* ---------- Heading Banner ---------- */
@@ -60,6 +65,7 @@ body {
 .navbar {
     width: 100%;
     overflow: auto;
+    font-family: var(--h3-font);
 }
 
 .navbar a {
@@ -67,7 +73,7 @@ body {
     padding: 10px 30px;
     color: var(--beige);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     width: 25%;
     text-align: center;
     background-color: var(--darkbrown);
@@ -93,14 +99,16 @@ body {
 h1, h2 {
     text-align: center;
     color: var(--darkbrown);
-    font-family: "Cormorant Garamond", serif;
+    font-family: var(--h2-font);
     margin-top: 50px;
     text-shadow: 2px 2px 4px #0000002f;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 15px;
     margin: 10px 0 5px;
+    font-family: var(--h3-font);
 }
 
 /* ---------- Paragraph ---------- */
@@ -131,7 +139,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    font-family: "Cormorant Garamond", serif;
+    font-family: var(--h3-font);
     font-weight: 400;
 }
 
@@ -188,7 +196,7 @@ button:hover {
 .icon-label {
     margin-top: 0px; /* Adds space between icon and label */
     font-size: 14px; /* Adjust label text size */
-    font-family: "Cormorant Garamond", serif; /* Matches font family */
+    font-family: var(--h3-font); /* Matches font family */
 }
 
 
