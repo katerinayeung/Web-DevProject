@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Bliss - Menu</title>
+    <title>Coffee Shop - Menu</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="../css/menu.css">
 </head>
@@ -24,7 +24,7 @@
     <div class="menuNav">
         <div class="menu-icon">
             <a href="#popular-section"><img id="icons" src="../img/menuIcons/favs.png" alt="heart"></a>
-            <p class="icon-label">POPULAR ITEMS</p>
+            <p class="icon-label">POPULAR</p>
         </div>
         <div class="menu-icon">
             <a href="#holiday-section"><img id="icons" src="../img/menuIcons/holiday.png" alt="snowflake"></a>
@@ -55,14 +55,14 @@
                     <div class="menu-item">
                         <img src="../img/menuItems/hotLatte.png" alt="Latte" class="menu-image">
                         <h3>Latte</h3>
-                        <p>Creamy espresso with steamed milk.</p>
+                        <p>Smooth espresso combined with steamed milk.</p>
                         <p>$4.00</p>
                         <button onclick="addToOrder('Latte', 4.00)">Add to Order</button>
                     </div>
                     <div class="menu-item">
                         <img src="../img/menuItems/matchaLatte.png" alt="Matcha Latte" class="menu-image">
                         <h3>Matcha Latte</h3>
-                        <p>Earthy matcha with steamed milk.</p>
+                        <p>Earthy matcha blended with steamed milk.</p>
                         <p>$4.50</p>
                         <button onclick="addToOrder('Matcha Latte', 4.50)">Add to Order</button>
                     </div>
@@ -74,18 +74,18 @@
                         <button onclick="addToOrder('Cookie', 2.75)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/menuItems/cinnaRoll.png" alt="cinnamon roll" class="menu-image">
-                        <h3>Cinnamon Roll</h3>
-                        <p>Warm and buttery with a sweet glaze.</p>
-                        <p>$3.75</p>
-                        <button onclick="addToOrder('Cinnamon Roll', 3.75)">Add to Order</button>
-                    </div>
-                    <div class="menu-item">
                         <img src="../img/menuItems/bagel.png" alt="bagel" class="menu-image">
                         <h3>Bagel Sandwich</h3>
                         <p>Crispy everything bagel with cream cheese and veggies.</p>
                         <p>$5.00</p>
                         <button onclick="addToOrder('Bagel', 5.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/chocMuffin.png" alt="muffin" class="menu-image">
+                        <h3>Double Chocolate Muffin</h3>
+                        <p>Warm melty chocolate muffin with dark chocolate center.</p>
+                        <p>$3.00</p>
+                        <button onclick="addToOrder('Chocolate Muffin', 3.00)">Add to Order</button>
                     </div>
                 </div>
                 
@@ -94,40 +94,64 @@
         </div>
 
         <!-- Holiday Section -->
+        <!-- Holiday Section -->
         <div id="holiday-section">
-            <h2>Holiday Specials</h2>
+            <h2>Holiday Specialties</h2>
             <!-- Holiday Container -->
             <div class="carousel-container">
-                <button class="carousel-btn prev" onclick="scrollCarousel('popular-carousel', -1)">&#8249;</button>
-                <div class="carousel" id="popular-carousel">
-                    <!-- Each menu item in the carousel -->
+                <button class="carousel-btn prev" onclick="scrollCarousel('holiday-carousel', -1)">&#8249;</button>
+                <div class="carousel" id="holiday-carousel">
+                    <!-- Holiday menu items -->
                     <div class="menu-item">
-                        <img src="" alt="Latte" class="menu-image">
-                        <h3>Latte</h3>
-                        <p>Creamy espresso with steamed milk.</p>
+                        <img src="../img/menuItems/hotCocoa.png" alt="Hot Chocolate with Marshmallows" class="menu-image">
+                        <h3>Hot Chocolate</h3>
+                        <p>Rich milk chocolate topped with snowman marshmallows.</p>
                         <p>$4.00</p>
-                        <button onclick="addToOrder('Latte', 4.00)">Add to Order</button>
+                        <button onclick="addToOrder('Hot Chocolate', 4.00)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="" alt="Matcha Latte" class="menu-image">
-                        <h3>Matcha Latte</h3>
-                        <p>Earthy matcha with steamed milk.</p>
+                        <img src="../img/menuItems/smoreLatte.png" alt="Toasted S'mores Latte" class="menu-image">
+                        <h3>Toasted S'mores Latte</h3>
+                        <p>Chocolatey latte with a toasted marshmallow topping.</p>
+                        <p>$4.75</p>
+                        <button onclick="addToOrder('Toasted S’mores Latte', 4.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/cinnaChai.png" alt="Cinnamon Stick Chai Latte" class="menu-image">
+                        <h3>Cinnamon Stick Chai</h3>
+                        <p>Spiced chai latte with cinnamon bark syrup.</p>
+                        <p>$4.25</p>
+                        <button onclick="addToOrder('Cinnamon Stick Chai', 4.25)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/gingLatte.png" alt="Gingerbread Latte with Cookie" class="menu-image">
+                        <h3>Gingerbread Latte</h3>
+                        <p>Classic latte with gingerbread syrup and topped with cookies.</p>
                         <p>$4.50</p>
-                        <button onclick="addToOrder('Matcha Latte', 4.50)">Add to Order</button>
+                        <button onclick="addToOrder('Gingerbread Latte', 4.50)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/menuItems/" alt="" class="menu-image">
-                        <h3></h3>
-                        <p></p>
-                        <p>$</p>
-                        <button onclick="addToOrder('', )">Add to Order</button>
+                        <img src="../img/menuItems/cinnaRoll.png" alt="Cinnamon Roll" class="menu-image">
+                        <h3>Cinnamon Roll</h3>
+                        <p>Warm, buttery pastry with a sweet glaze.</p>
+                        <p>$3.75</p>
+                        <button onclick="addToOrder('Cinnamon Roll', 3.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/pepMocha.png" alt="Peppermint White Mocha" class="menu-image">
+                        <h3>Peppermint White Mocha</h3>
+                        <p>Creamy white chocolate mocha with a hint of peppermint.</p>
+                        <p>$4.75</p>
+                        <button onclick="addToOrder('Peppermint White Mocha', 4.75)">Add to Order</button>
                     </div>
                 </div>
-                <button class="carousel-btn next" onclick="scrollCarousel('popular-carousel', 1)">&#8250;</button>
+                <button class="carousel-btn next" onclick="scrollCarousel('holiday-carousel', 1)">&#8250;</button>
             </div>
         </div>
 
+
         <!-- Coffee Section -->
+
         <div id="coffee-section">
             <h2>Drinks</h2>
             <!-- Coffee Carousel -->
@@ -136,30 +160,59 @@
                 <div class="carousel" id="coffee-carousel">
                     <!-- Coffee menu items -->
                     <div class="menu-item">
-                        <img src="../img/cappuccino.jpg" alt="Cappuccino" class="menu-image">
-                        <h3>Cappuccino</h3>
-                        <p>Rich espresso topped with frothy milk.</p>
-                        <p>$4.50</p>
-                        <button onclick="addToOrder('Cappuccino', 4.50)">Add to Order</button>
+                        <img src="../img/menuItems/hotCoffe.png" alt="Hot Coffee" class="menu-image">
+                        <h3>Hot Coffee</h3>
+                        <p>Rich, freshly brewed classic dark roast.</p>
+                        <p>$2.00</p>
+                        <button onclick="addToOrder('Hot Coffee', 2.00)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/americano.jpg" alt="Americano" class="menu-image">
-                        <h3>Americano</h3>
-                        <p>Smooth espresso diluted with hot water.</p>
-                        <p>$3.50</p>
-                        <button onclick="addToOrder('Americano', 3.50)">Add to Order</button>
+                        <img src="../img/menuItems/icedCoffee.png" alt="Iced Coffee" class="menu-image">
+                        <h3>Iced Coffee</h3>
+                        <p>Classic rich dark roast poured over ice.</p>
+                        <p>$2.50</p>
+                        <button onclick="addToOrder('Iced Coffee', 2.50)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/espresso.jpg" alt="Espresso" class="menu-image">
+                        <img src="../img/menuItems/espresso.png" alt="Espresso" class="menu-image">
                         <h3>Espresso</h3>
-                        <p>Strong and bold espresso shot.</p>
+                        <p>Strong and bold shot of hot espresso.</p>
                         <p>$3.00</p>
                         <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/icedLatte.png" alt="Iced Latte" class="menu-image">
+                        <h3>Iced Latte</h3>
+                        <p>Chilled espresso mixed with milk and served over ice.</p>
+                        <p>$4.50</p>
+                        <button onclick="addToOrder('Iced Latte', 4.50)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/icedMatcha.png" alt="Iced Matcha Latte" class="menu-image">
+                        <h3>Iced Matcha Latte</h3>
+                        <p>Refreshing green tea matcha blended with milk over ice.</p>
+                        <p>$4.75</p>
+                        <button onclick="addToOrder('Iced Matcha Latte', 4.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/hotLatte.png" alt="Hot Latte" class="menu-image">
+                        <h3>Hot Latte</h3>
+                        <p>Smooth espresso combined with steamed milk.</p>
+                        <p>$4.00</p>
+                        <button onclick="addToOrder('Hot Latte', 4.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/matchaLatte.png" alt="Hot Matcha Latte" class="menu-image">
+                        <h3>Matcha Latte</h3>
+                        <p>Earthy matcha blended with steamed milk.</p>
+                        <p>$4.50</p>
+                        <button onclick="addToOrder('Matcha Latte', 4.50)">Add to Order</button>
                     </div>
                 </div>
                 <button class="carousel-btn next" onclick="scrollCarousel('coffee-carousel', 1)">&#8250;</button>
             </div>
         </div>
+
 
         <!-- Food Section -->
         <div id="food-section">
@@ -170,26 +223,69 @@
                 <div class="carousel" id="food-carousel">
                     <!-- Food menu items -->
                     <div class="menu-item">
-                        <img src="../img/cake.jpg" alt="Chocolate Cake" class="menu-image">
-                        <h3>Chocolate Cake</h3>
-                        <p>Rich and moist chocolate delight.</p>
-                        <p>$5.00</p>
-                        <button onclick="addToOrder('Chocolate Cake', 5.00)">Add to Order</button>
+                        <img src="../img/menuItems/chocCroissant.png" alt="Chocolate Croissant" class="menu-image">
+                        <h3>Chocolate Croissant</h3>
+                        <p>Buttery croissant filled with rich chocolate.</p>
+                        <p>$3.25</p>
+                        <button onclick="addToOrder('Chocolate Croissant', 3.25)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/croissant.jpg" alt="Croissant" class="menu-image">
-                        <h3>Croissant</h3>
-                        <p>Flaky, buttery pastry.</p>
+                        <img src="../img/menuItems/cupcake.png" alt="Vanilla Cupcake" class="menu-image">
+                        <h3>Vanilla Cupcake</h3>
+                        <p>Fluffy vanilla cupcake topped with fresh rasberries.</p>
                         <p>$2.75</p>
-                        <button onclick="addToOrder('Croissant', 2.75)">Add to Order</button>
+                        <button onclick="addToOrder('Vanilla Cupcake', 2.75)">Add to Order</button>
                     </div>
                     <div class="menu-item">
-                        <img src="../img/muffin.jpg" alt="Blueberry Muffin" class="menu-image">
+                        <img src="../img/menuItems/heartPuff.png" alt="Heart Puff Pastry" class="menu-image">
+                        <h3>Heart Puff Pastry</h3>
+                        <p>Delicate puff pastry with a touch of sweetness.</p>
+                        <p>$3.00</p>
+                        <button onclick="addToOrder('Heart Puff Pastry', 3.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/jamCookie.png" alt="Jam Cookie" class="menu-image">
+                        <h3>Jam Cookie</h3>
+                        <p>Soft cookie with a sweet jam center.</p>
+                        <p>$2.50</p>
+                        <button onclick="addToOrder('Jam Cookie', 2.50)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/muffin.png" alt="Blueberry Muffin" class="menu-image">
                         <h3>Blueberry Muffin</h3>
-                        <p>Soft muffin filled with fresh blueberries.</p>
-                        <p>$2.75</p>
-                        <button onclick="addToOrder('Blueberry Muffin', 2.75)">Add to Order</button>
+                        <p>Fluffy muffin loaded with fresh blueberries.</p>
+                        <p>$3.50</p>
+                        <button onclick="addToOrder('Blueberry Muffin', 3.50)">Add to Order</button>
                     </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/rasDanish.png" alt="Raspberry Danish" class="menu-image">
+                        <h3>Raspberry Danish</h3>
+                        <p>Flaky pastry filled with jam and cream cheese.</p>
+                        <p>$3.75</p>
+                        <button onclick="addToOrder('Raspberry Danish', 3.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/cookies.png" alt="Cookies" class="menu-image">
+                        <h3>Chocolate Chip Cookie</h3>
+                        <p>Golden cookie with milk chocolate chips.</p>
+                        <p>$2.75</p>
+                        <button onclick="addToOrder('Cookie', 2.75)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/bagel.png" alt="bagel" class="menu-image">
+                        <h3>Bagel Sandwich</h3>
+                        <p>Crispy everything bagel with cream cheese and veggies.</p>
+                        <p>$5.00</p>
+                        <button onclick="addToOrder('Bagel', 5.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../img/menuItems/chocMuffin.png" alt="muffin" class="menu-image">
+                        <h3>Double Chocolate Muffin</h3>
+                        <p>Warm melty chocolate muffin with dark chocolate center.</p>
+                        <p>$3.00</p>
+                        <button onclick="addToOrder('Chocolate Muffin', 3.00)">Add to Order</button>
+                    </div>
+                    
                 </div>
                 <button class="carousel-btn next" onclick="scrollCarousel('food-carousel', 1)">&#8250;</button>
             </div>
