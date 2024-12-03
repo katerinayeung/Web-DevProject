@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe - Coffee Haven</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="../css/subscribe.css">
+    <link href="https://fonts.cdnfonts.com/css/saint-george" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    
+      
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../html/index.html">Home</a>
+        <a href="../html/menu.html">Start an Order</a>
+        <a href="../html/contact.html">Contact Us</a>
+        <a href="../html/subscribe.html">Subscribe</a>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div class="subscribe-container">
+        <h1>Stay in the Loop!</h1>
+        <p>Subscribe to receive the latest updates on new items, special offers, and events.</p>
+        <form class="subscribe-form" id="subscribeForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <button type="submit">Subscribe</button>
+        </form>
+        
+        <script type="module">
+            import { db } from '../js/firebase.js';
+            import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js';
+        
+            // Reference the Firestore collection
+            const subscribersCollection = collection(db, 'subscribers');
+        
+            // Handle form submission
+            document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+        
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+        
+                try {
+                    // Save data to Firestore
+                    await addDoc(subscribersCollection, { name, email });
+                    alert('Thank you for subscribing!');
+                } catch (error) {
+                    console.error('Error adding document: ', error);
+                    alert('Subscription failed. Please try again.');
+                }
+        
+                // Clear the form
+                e.target.reset();
+            });
+        </script>
+
+    </div>
+        
+        
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

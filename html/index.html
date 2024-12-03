@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Code to import the custom font used for the compary name -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Coffee Shop</title>
+    <!-- Link to external stylesheets -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/saint-george" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       
+    </head>
 
-    <title>2024 CSCI Web Development Project</title>
-  </head>
-
-  <body>
-    <!-- Navigation bar -->
-    <div class="content">
-      <div class="navbar">
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../html/index.html">Home</a>
         <a href="../html/menu.html">Start an Order</a>
-        <a>Item 2</a>
-        <a>Item 3</a>
-        <a>Item 4</a>
-      </div>
-
-    <!-- Large compary title -->
-    <h1 id="storeName">
-      STORE NAME HERE
-    </h1>
-
-    <!-- First (large) image on the page-->
-    <img id="indexMainImage" src="../img/coffeeShop.jpg">
-
+        <a href="../html/contact.html">Contact Us</a>
+        <a href="../html/subscribe.html">Subscribe</a>
     </div>
-  </body>
+
+    <!-- Welcome Section -->
+    <header class="welcome-container">
+        <img id="main-banner" src="../img/coffeeShop.jpg" alt="Cozy Coffee Shop">
+        <div class="overlay">
+            <img src="../img/cafeLogo.png" id="logo" alt="Logo">
+            <div class="text-content">
+                <h1 class="store-name">Welcome to Our Coffee Shop.</h1>
+                <p class="welcome-text">Where every sip feels like home. Explore our menu to indulge in handcrafted coffee, teas, treats, and seasonal delights.</p>
+                <a href="../html/menu.html" class="cta-button">View Menu</a>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
+</body>
 </html>

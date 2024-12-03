@@ -4,7 +4,6 @@
     --hunterGreen: #405344;
     /* Background color */
     --beige: #FDECDA;
-    --lightGreen: #A3C9A8;
     --darkbrown: #472e23;
     --backgroundimg: url("../img/coffeeShop.jpg");
     /* Font family */
@@ -103,6 +102,10 @@ h1, h2 {
     margin-top: 50px;
     text-shadow: 2px 2px 4px #0000002f;
     font-size: 30px;
+}
+
+h2 {
+    letter-spacing: 2px;
 }
 
 h3 {
@@ -276,4 +279,12 @@ button:hover {
 
 .carousel-button:focus {
     outline: none; /* Removes focus outline for cleaner design */
+}
+
+.footer {
+    background-color: var(--darkbrown);
+    color: var(--beige);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
 }
