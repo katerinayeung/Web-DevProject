@@ -1,21 +1,50 @@
 // firebase.js
-import {initializeApp} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import {getFirestore} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6DTFZOcIuFqipxMmKt5YFX1GFwmzBiC0",
-  authDomain: "coffeeshop2024-ac722.firebaseapp.com",
-  projectId: "coffeeshop2024-ac722",
-  storageBucket: "coffeeshop2024-ac722.firebasestorage.app",
-  messagingSenderId: "1064140903269",
-  appId: "1:1064140903269:web:85b30b2d085b56ae94c78c",
-  measurementId: "G-L6F19YR4Q5"
+  apiKey: "AIzaSyAmxXFwSk2eq_Shbknil2FhUHUWGnxpW1g",
+  authDomain: "database225-e1028.firebaseapp.com",
+  projectId: "database225-e1028",
+  storageBucket: "database225-e1028.firebasestorage.app",
+  messagingSenderId: "829875280769",
+  appId: "1:829875280769:web:713ba7a1401086f490a680",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const auth = firebaseApp.auth();
 
-// Initialize Firestore
-const db = getFirestore(app);
+  // Handle form submission
+  document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-export {db};
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    console.log(name, email);
+
+    db.collection('subscribers').add({
+        name: name,
+        email: email
+    })
+    .then((docRef) => {
+        console.log('Document written with ID: ', docRef.id);
+        alert('Thank you for subscribing!');
+    })
+/*
+    try {
+        // Save data to Firestore
+        await addDoc(subscribersCollection, { name, email });
+        alert('Thank you for subscribing!');
+    } 
+    catch (error) {
+        console.error('Error adding document: ', error);
+        alert('Subscription failed. Please try again.');
+    }
+*/
+    // Clear the form
+    e.target.reset();
+});
+
+
+

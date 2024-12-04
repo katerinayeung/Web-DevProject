@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscribe - Coffee Haven</title>
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="../css/subscribe.css">
@@ -31,36 +30,15 @@
         
             <button type="submit">Subscribe</button>
         </form>
-        
+        <!--  
         <script type="module">
             import {db} from '../js/firebase.js';
             import {collection, addDoc} from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js';
         
             // Reference the Firestore collection
             const subscribersCollection = collection(db, 'subscribers');
-        
-            // Handle form submission
-            document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
-                e.preventDefault();
-        
-                // Get form data
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-        
-                try {
-                    // Save data to Firestore
-                    await addDoc(subscribersCollection, { name, email });
-                    alert('Thank you for subscribing!');
-                } 
-                catch (error) {
-                    console.error('Error adding document: ', error);
-                    alert('Subscription failed. Please try again.');
-                }
-        
-                // Clear the form
-                e.target.reset();
-            });
-        </script>
+        -->
+          
 
     </div>
         
@@ -70,5 +48,12 @@
     <footer class="footer">
         <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
     </footer>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+<script src="../js/firebase.js"></script>
 </body>
 </html>
