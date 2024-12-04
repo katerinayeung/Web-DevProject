@@ -31,18 +31,7 @@ const auth = firebaseApp.auth();
         console.log('Document written with ID: ', docRef.id);
         alert('Thank you for subscribing!');
     })
-/*
-    try {
-        // Save data to Firestore
-        await addDoc(subscribersCollection, { name, email });
-        alert('Thank you for subscribing!');
-    } 
-    catch (error) {
-        console.error('Error adding document: ', error);
-        alert('Subscription failed. Please try again.');
-    }
-*/
-    // Clear the form
+
     e.target.reset();
 });
 
