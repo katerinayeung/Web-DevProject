@@ -1,0 +1,106 @@
+/* --Root-- */
+:root{
+/* Main font color */
+--hunterGreen: #405344;
+/* Background color */
+--beige: #FDECDA;
+--lightGreen: #A3C9A8;
+--darkbrown: #472e23;
+/* Font */
+--h2-font: 'Saint George', sans-serif;
+--h3-font: "Poppins", serif;
+}
+
+body{
+    background-color: var(--beige);
+}
+
+form{
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: var(--h2-font);
+    margin-bottom: 20px ;
+    color: var(--hunterGreen);
+}
+
+/* --- Center Image -- */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+/* --- Footer -- */
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: var(--darkbrown);
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px;
+    font-family: var(--h3-font);
+    font-size: 12px;
+    
+}
+
+/* --- Navbar -- */
+.navbar {
+    padding: 5px;
+    width: 100%;
+    overflow: auto;
+    font-family: var(--h3-font);
+}
+
+.navbar a {
+    float: left;
+    padding: 10px 30px;
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 15px;
+    width: 25%;
+    text-align: center;
+    background-color: var(--darkbrown);
+}
+
+.navbar a:hover {
+    background-color: var(--hunterGreen);
+    color: var(--beige);
+
+}
+
+/* Title */
+#contact-title{
+    font-family: var(--h2-font);
+    color: var(--hunterGreen);
+    text-align: center;
+}
+
+/* Submit button */
+.btn{
+    border: 2px solid var(--hunterGreen);
+    background-color: var(--hunterGreen);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    font-size: 20px;
+
+    
+}
+
+.btn:hover{
+    border: 2px solid white;
+    background-color: white;
+    color: var(--darkbrown);
+}
+
+/* Map */
+iframe{
+    border-radius:10px; 
+    width:400px;   
+    height:400px;
+    
+}
