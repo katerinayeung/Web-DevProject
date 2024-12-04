@@ -1,14 +1,11 @@
 /* ---------- Root Variables ---------- */
 :root {
-    /* Color palette */
     --hunterGreen: #405344;
     --beige: #FDECDA;
-    --lightGreen: #A3C9A8;
     --darkbrown: #472e23;
-
-    /* Font families */
-    --h2-font: 'Saint George', sans-serif;
-    --h3-font: "Poppins", serif;
+    --lightgreen: #7c8a7f;
+    --h2-font:'Saint George', sans-serif;
+    --h3-font: 'Poppins', serif;
 }
 
 /* ---------- Global Styles ---------- */
@@ -16,23 +13,17 @@ body {
     margin: 0;
     font-family: var(--h3-font);
     font-weight: 400;
-    color: var(--hunterGreen);
     background-color: var(--beige);
+    color: var(--hunterGreen);
 }
 
 h1, h2, h3 {
-
+    text-align: center;
     color: var(--darkbrown);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 a {
     text-decoration: none;
-}
-
-.container {
-    position: relative;
-    text-align: center;
 }
 
 /* ---------- Navbar Styles ---------- */
@@ -59,75 +50,77 @@ a {
 
 }
 
-/* ---------- Welcome Section ---------- */
-.welcome-container {
-    position: relative;
-    width: 100%;
+
+/* ---------- Subscribe Section ---------- */
+.subscribe-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: var(--hunterGreen);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#main-banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(70%);
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%; /* Adjust width as needed */
-    max-width: 1200px;
-    gap: 20px;
-    color: var(--beige);
-}
-
-#logo {
-    width: 350; 
-    height: 350;
-    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.7));
-}
-
-.text-content {
-    text-align: left;
-    flex: 1; 
-}
-
-.store-name {
+.subscribe-container h1 {
     font-family: var(--h2-font);
     letter-spacing: 2px;
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: var(--beige);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.welcome-text {
-    font-size: 1.2rem;
+.subscribe-container p {
+    font-size: 1.1rem;
     margin-bottom: 20px;
     color: var(--beige);
-    line-height: 1.5;
 }
 
-.cta-button {
-    background-color: var(--hunterGreen);
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: 500;
     color: var(--beige);
+    font-size: 1rem;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--hunterGreen);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    font-family: var(--h3-font);
+}
+
+input:focus {
+    border-color: var(--darkbrown);
+    outline: none;
+}
+
+button {
     padding: 10px 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    background-color: var(--lightgreen);
+    color: var(--beige);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: var(--h3-font);
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cta-button:hover {
+button:hover {
     background-color: var(--darkbrown);
     transform: scale(1.05);
 }
-
 
 /* ---------- Footer ---------- */
 .footer {
@@ -135,5 +128,7 @@ a {
     color: var(--beige);
     text-align: center;
     padding: 10px 0;
+    margin: 0;
     font-size: 14px;
+    bottom: 0%;
 }
