@@ -176,4 +176,19 @@ iframe{
     margin-top: 50px;
     border-radius:10px; 
     width:400px;   
-  
+    height:400px;
+    
+}
+
+.instagram-post {
+    display: block;
+    margin: auto;
+    max-width: 370px; 
+    height: auto; 
+    
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+
+}
