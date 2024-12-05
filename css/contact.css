@@ -1,28 +1,39 @@
 /* --Root-- */
 :root{
-/* Main font color */
+/* -- Main font color -- */
 --hunterGreen: #405344;
-/* Background color */
+/* -- Background color -- */
 --beige: #FDECDA;
 --lightGreen: #A3C9A8;
 --darkbrown: #472e23;
-/* Font */
+/* -- Font -- */
 --h2-font: 'Saint George', sans-serif;
 --h3-font: "Poppins", serif;
 }
 
 body{
-    background-color: var(--beige);
+    background-image: url("../img/texturecream.avif");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 
+/* --- Form --*/
 form{
-    max-width: 800px;
-    margin: 10px auto;
+    max-width: 730px;
+    margin: 20px auto;
     padding: 20px;
-    font-family: var(--h2-font);
+    font-family: var(--h3-font);
     margin-bottom: 20px ;
-    color: var(--hunterGreen);
+    color: var(--darkbrown);
+    background-color: var(--darkbrown);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
 }
+
+
 
 /* --- Center Image -- */
 .center {
@@ -34,26 +45,67 @@ form{
 
 /* --- Footer -- */
 footer {
+    height: auto;
     bottom: 0;
     width: 100%;
-    background-color: white;
-    color: var(--darkbrown);
+    background-color: var(--darkbrown);
+    color: var(--beige);
     text-align: center;
     margin-top: 30px;
     padding: 5px;
     font-family: var(--h3-font);
-    font-size: 12px;
+   
+}
+
+/* -- Links in footer --*/
+footer a{
+    color: white;
+    text-decoration: none;
+    float: center;
+    padding: 10px 40px;;
+    font-size: 15px;
+    width: 25%;
+    text-align: center;
+    background-color: var(--darkbrown);
+      
+}
+
+.footer-name{
+    position:absolute;
+    float: left;
+    text-align:center;
+    padding: 20px 50px;
+    font-size: 30px;
+    font-family: var(--h2-font);
     
 }
 
+/* -- p in footer --*/
+footer p{
+    font-size: 13px;
+    
+
+}
+
+hr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+
+
+
+
 /* --- Navbar -- */
 .navbar {
-    padding: 5px;
     width: 100%;
     overflow: auto;
     font-family: var(--h3-font);
 }
 
+/* -- Links in navbar-- */
 .navbar a {
     float: left;
     padding: 10px 30px;
@@ -65,42 +117,63 @@ footer {
     background-color: var(--darkbrown);
 }
 
+/*-- Links when hover -- */
 .navbar a:hover {
     background-color: var(--hunterGreen);
     color: var(--beige);
 
 }
 
-/* Title */
+/* -- Title -- */
 #contact-title{
-    font-family: var(--h2-font);
-    color: var(--hunterGreen);
+    margin: 20px;
+    font-size: 25px;
+    font-family: var(--h3-font);
+    color: var(--darkbrown);
     text-align: center;
 }
 
-/* Submit button */
+/* -- Submit button -- */
 .btn{
-    border: 2px solid var(--hunterGreen);
-    background-color: var(--hunterGreen);
+    border: 2px solid var(--lightGreen);
+    background-color: var(--lightGreen);
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
     font-size: 20px;
-
     
 }
 
+/* -- Submit button when hover -- */
 .btn:hover{
     border: 2px solid white;
     background-color: white;
     color: var(--darkbrown);
-}
-
-/* Map */
-iframe{
-    border-radius:10px; 
-    width:400px;   
-    height:400px;
+    
+    transform: scale(1.05);
     
 }
+
+/* -- Subscribe -- */
+.subscribe label{
+    color: white;
+}
+/* -- Logo image -- */
+#logo {
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0px 8px 10px var(--darkbrown));
+}
+
+/* -- Map -- */
+map{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+}
+iframe{
+    margin-top: 50px;
+    border-radius:10px; 
+    width:400px;   
+  
