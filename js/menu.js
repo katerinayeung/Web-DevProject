@@ -5,6 +5,7 @@ let total = 0;
 const orderList = document.getElementById('order-list');
 const totalPrice = document.getElementById('total-price');
 const checkoutButton = document.getElementById('checkout-btn'); // Reference to the checkout button
+const saveButton = document.getElementById('save-btn');
 
 // Function to add items to the order
 function addToOrder(item, price) {
@@ -52,7 +53,7 @@ checkoutButton.addEventListener('click', function () {
     $("li").each(function() {
       currentOrder += $(this).text() + "\n";
     });
-    console.log(currentOrder); // Print the text content of each `<li>`
+    console.log(currentOrder);
     let data = {
         order: currentOrder
     }
@@ -61,3 +62,24 @@ checkoutButton.addEventListener('click', function () {
     // Removing all items from the list
     $("li").empty();
 });
+
+// Feature to add a save button that saves your order so that
+// when you refresh the page your order will be saved.
+const inputElement = document.getElementById('order-list');
+const saveListToLocalStorage = () => {
+    const existingItems = Array.from(inputElement.getElementsByTagName('li')).map(li => li.textContent);
+    localStorage.setItem('listItems', JSON.stringify(existingItems));
+}
+
+const renderList = () => {
+  const savedItems = JSON.parse(localStorage.getItem('listItems')) || [];
+  inputElement.innerHTML = '';
+  savedItems.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    inputElement.appendChild(li);
+  });
+};
+
+saveButton.addEventListener('click', saveListToLocalStorage);
+window.onload = renderList;
