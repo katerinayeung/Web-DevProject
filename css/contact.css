@@ -212,6 +212,8 @@ h1{
     width: 100%vw;
     height: 100%vh;
 
+    /* Adding extra margin to ensure IG blockquote is not flush with map*/
+    margin-top: 30px;
 }
 
 
