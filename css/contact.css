@@ -4,7 +4,7 @@
 --hunterGreen: #405344;
 /* -- Background color -- */
 --beige: #FDECDA;
---lightGreen: #A3C9A8;
+--lightGreen: rgba(223, 229, 193, 0.894);
 --darkbrown: #472e23;
 /* -- Font -- */
 --h2-font: 'Saint George', sans-serif;
@@ -13,15 +13,19 @@
 
 
 body{
-    background-image: url("../img/texturecream.avif");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    
+    margin: 0;
+    background-color: whitesmoke;
 }
 
-/* --- Form --*/
+/* -- Form -- */
+
+#contact-title{
+    margin: 20px;
+    font-family: var(--h2-font);
+    color: white;
+    text-align: center;
+    
+}
 form{
     max-width: 730px;
     margin: 20px auto;
@@ -34,6 +38,7 @@ form{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     
 }
+
 
 
 
@@ -53,7 +58,6 @@ footer {
     background-color: var(--darkbrown);
     color: var(--beige);
     text-align: center;
-    margin-top: 30px;
     padding: 5px;
     font-family: var(--h3-font);
    
@@ -125,16 +129,6 @@ hr{
 
 }
 
-/* -- Title -- */
-#contact-title{
-    margin: 20px;
-    font-size: 25px;
-    font-family: var(--h3-font);
-    color: var(--darkbrown);
-    text-align: center;
-    
-}
-
 /* -- Submit button -- */
 .btn{
     border: 2px solid var(--lightGreen);
@@ -149,9 +143,9 @@ hr{
 
 /* -- Submit button when hover -- */
 .btn:hover{
-    border: 2px solid white;
-    background-color: white;
-    color: var(--darkbrown);
+    border: 2px solid var(--darkbrown);
+    background-color: var(--lightGreen);
+    color: white;
     
     transform: scale(1.05);
     
@@ -165,35 +159,60 @@ hr{
 #logo {
     max-width: 500px;
     height: auto;
-    filter: drop-shadow(0px 8px 10px var(--darkbrown));
+    filter: drop-shadow(0px 0px 7px grey);
 }
 
 
 
 /* -- Map -- */
 map{
-    background-color: white;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 20px;
 }
 iframe{
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius:10px;
-    max-width: 100%;
+    max-width: 80%;
+
     
 }
 
 .instagram-post {
-    display: block;
-    margin: 50px auto;
+    margin: 20px auto;
     max-width: 370px; 
-    height: auto; 
-    
     background-color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 10px;
+}
+
+.insta-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px;
+    background-color: rgba(223, 229, 193, 0.894);
+    width: 90%vw;
+    height: 100%vh;
+}
+
+h1{
+    font-family: var(--h2-font);
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.map-container {
+    font-family: var(--h2-font);
+    padding: 20px;
+    background-color: var(--beige);
+    width: 100%vw;
+    height: 100%vh;
 
 }
+
 
 
