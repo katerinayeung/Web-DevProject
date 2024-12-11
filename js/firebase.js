@@ -15,21 +15,25 @@ const db = firebase.firestore();
 const auth = firebaseApp.auth();
 
   // Handle form submission
-  document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
+  document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Get form data
-    const name = document.getElementById('name').value;
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
     const email = document.getElementById('email').value;
-    console.log(name, email);
+    const comment = document.getElementById('commentTextarea').value;
+    console.log(fname,lname,email,comment);
 
     db.collection('subscribers').add({
-        name: name,
-        email: email
+        fname: fname,
+        lname: lname,
+        email: email,
+        comment: comment
     })
     .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
-        alert('Thank you for subscribing!');
+        alert('Thank you for feedback!');
     })
 
     e.target.reset();
