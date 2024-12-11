@@ -101,7 +101,7 @@ h1, h2 {
     font-family: var(--h2-font);
     margin-top: 50px;
     text-shadow: 2px 2px 4px #0000002f;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 h2 {
@@ -112,6 +112,12 @@ h3 {
     font-size: 15px;
     margin: 10px 0 5px;
     font-family: var(--h3-font);
+}
+
+h4 {
+    text-align: center;
+    font-size: 30px;
+    font-family: serif;
 }
 
 /* ---------- Paragraph ---------- */
