@@ -61,6 +61,7 @@ checkoutButton.addEventListener('click', function () {
 
     // Removing all items from the list
     $("li").empty();
+    $("ul").empty();
 });
 
 // Feature to add a save button that saves your order so that
