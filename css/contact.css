@@ -21,7 +21,7 @@ body{
 
 #contact-title{
     margin: 20px;
-    font-family: var(--h2-font);
+    font-family: serif;
     color: white;
     text-align: center;
     
@@ -164,18 +164,7 @@ hr{
 
 
 
-/* -- Map -- */
-map{
-    margin: 20px auto;
-    padding: 20px;
-}
-iframe{
-    margin-top: 20px;
-    border-radius:10px;
-    max-width: 80%;
-
-    
-}
+/*--Instagram--*/
 
 .instagram-post {
     margin: 20px auto;
@@ -205,14 +194,14 @@ h1{
     padding: 10px;
 }
 
-.map-container {
-    font-family: var(--h2-font);
-    padding: 30px;
+
+/* ---team info----*/
+.teaminfo{
     background-color: rgb(209, 191, 167);
     width: 100%vw;
     height: 100%vh;
-
-    /* Adding extra margin to ensure IG blockquote is not flush with map*/
+    padding: 30px;
+    text-align: center;
     margin-top: 30px;
 }
 

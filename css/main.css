@@ -127,8 +127,8 @@ a {
 
 /* ---- Hours-of-operation ---- */
 
-h2{
-    font-family: var(--h3-font);
+.hours-title{
+    font-family: serif;
     text-align: center;
 }
 
@@ -147,14 +147,37 @@ h2{
 	margin-left: auto;
 }
 
-/* ---team info----*/
-.teaminfo{
-    background-color: white;
-    padding: 30px;
+
+/*Map */
+
+.location-title{
     text-align: center;
+    font-family: serif;
 }
-h1{
+
+
+.map-container {
     font-family: var(--h2-font);
+    padding: 30px;
+    background-color: rgb(209, 191, 167);
+    width: 100%vw;
+    height: 100%vh;
+
+    margin-top: 30px;
+
+}
+
+iframe{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius:10px;
+    max-width: 80%;
+
+    
 }
 
 /* ---------- Footer ---------- */
