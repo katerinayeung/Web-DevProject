@@ -83,10 +83,7 @@ a {
     width: 90%; /* Adjust width as needed */
     max-width: 1200px;
     gap: 20px;
-    color: var(--beige);
-}
-
-#logo {
+    color: var(--beige);} #logo {
     width: 350; 
     height: 350;
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.7));
@@ -128,6 +125,22 @@ a {
     transform: scale(1.05);
 }
 
+/* ---- Hours-of-operation ---- */
+
+#hours, th, td{
+    border: 4px solid var(--darkbrown);
+    border-radius: 5px;
+    color: var(--darkbrown);
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#hours{
+	margin-right: auto;
+	margin-left: auto;
+}
 
 /* ---------- Footer ---------- */
 .footer {

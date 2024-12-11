@@ -103,6 +103,10 @@ hr{
     width: 100%;
     overflow: auto;
     font-family: var(--h3-font);
+
+    /* Added to this get rid of top padding such that the navbar
+    is flush with the top. */
+    padding: 0;
 }
 
 /* -- Links in navbar-- */
@@ -191,4 +195,6 @@ iframe{
     padding: 15px;
     border-radius: 10px;
 
+    /* Adding extra margin to ensure IG blockquote is not flush with map*/
+    margin-top: 30px;
 }
