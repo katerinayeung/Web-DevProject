@@ -130,10 +130,44 @@ a {
 
 
 /* ---------- Footer ---------- */
-.footer {
+footer {
+    height: auto;
+    bottom: 0;
+    width: 100%;
     background-color: var(--darkbrown);
     color: var(--beige);
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+    margin-top: 30px;
+    padding: 20px 0; 
+    font-family: var(--h3-font);
+    position: relative; 
 }
+
+/* Links in footer */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block; 
+    padding: 10px 40px;
+    background-color: var(--darkbrown); 
+}
+
+/* Footer name */
+.footer-name {
+    float: left; 
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 30px;
+    font-family: var(--h2-font);
+}
+
+/* Paragraphs in footer */
+footer p {
+    font-size: 11px;
+    margin: 10px 0; 
+}
+
+
+
+
